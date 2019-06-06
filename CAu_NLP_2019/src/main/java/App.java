@@ -94,7 +94,7 @@ public class App {
 
     public static int changeDate(String date) {
         int formdate = 0;
-        String sp[] = date.split(" ");
+        String sp[] = date.split(" ");/*
         formdate += Integer.parseInt(sp[2]) * 10000;
         formdate += Integer.parseInt(sp[0]);
 
@@ -147,7 +147,7 @@ public class App {
                 formdate += 1200;
                 break;
 
-        }
+        }*/
 
         return formdate;
 
