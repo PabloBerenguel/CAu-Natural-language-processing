@@ -7,12 +7,14 @@ public class Article {
         Headline = new ArrayList<String>();
         Url = new ArrayList<String>();
         Site = new ArrayList<String>();
+        Content = new ArrayList<String>();
     }
 
     private ArrayList<Integer> date;
     private ArrayList<String> Headline;
     private ArrayList<String> Url;
     private ArrayList<String> Site;
+    private ArrayList<String> Content;
 
     public void setDate(int num) {
         date.add(num);
@@ -30,6 +32,11 @@ public class Article {
         Site.add(site);
     }
 
+    public void setContent(String content) {
+        Content.add(content);
+    }
+
+
     public int getHowManyData() {
         return Headline.size();
     }
@@ -45,7 +52,12 @@ public class Article {
     public String getUrl(int num) {
         return Url.get(num);
     }
+
     public String getSite(int num) {
         return Site.get(num);
+    }
+
+    public String getContent(int num) {
+        return Content.get(num);
     }
 }

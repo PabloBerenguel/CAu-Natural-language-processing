@@ -1,9 +1,8 @@
 
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.text.DecimalFormat;
+import java.util.*;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -13,11 +12,14 @@ import org.jsoup.select.Elements;
 public class App {
     public static void main(String[] args) throws Exception {
         String url[] = {"https://www.thesun.co.uk/?s=", "https://www.bbc.co.uk/search?q=", "https://www.skysports.com/search?q="};
-        //ArrayList<String> key = new ArrayList<String>();
+
+        List<List<String>> documents = new ArrayList<>();
+        List<List<String>> result = new ArrayList<>();
+        List<String> result2 = new ArrayList<>();
+        String document;
+        List<String> goodUrl = new ArrayList<>();
         Article data = new Article();
-        //key.add("salah");
-        //key.add("Liverpool");
-        //key.add("Champions league");
+
         Document doc = null;
         Elements element = null;
 
@@ -28,10 +30,7 @@ public class App {
         for (int j = 0; j < url.length; j++) {
             for (int i = 0; i < key.length; i++) {
                 String urlTmp = url[j] + key[i];
-                doc = Jsoup.connect(urlTmp).execute().parse();
-            /* } catch (IOException e) {
-                   e.printStackTrace();
-             }*/
+                doc = Jsoup.connect(urlTmp).execute().parse(); // Document에 url 페이지의 데이터를 가져온다.
                 if (url[j].equals("https://www.thesun.co.uk/?s=")) {
                     element = doc.select("div.search-results-wrap");
                     for (Element el : element.select(".teaser-item")) {
@@ -42,6 +41,8 @@ public class App {
                             String temp = el.select(".search-date").text();
                             data.setDate(changeDate(temp));
                             data.setSite("The Sun");
+
+
                         }
                     }
                 }
@@ -70,12 +71,75 @@ public class App {
             }
         }
 
+        String content = "";
         for(int i = 0; i < data.getHowManyData(); i++) {
-            System.out.println(data.getDate(i));
-            System.out.println(data.getHeadline(i));
-            System.out.println(data.getUrl(i));
-            System.out.println(data.getSite(i));
-
+            content = "";
+            try {
+                doc = Jsoup.connect(data.getUrl(i)).execute().parse();
+                if (data.getSite(i) == "The Sun") {
+                    element = doc.select("div.article__content");
+                    for (Element el : element.select("p")) {
+                        content += el.text();
+                    }
+                    data.setContent(content);
+                } else if (data.getSite(i) == "BBC") {
+                    element = doc.select("div#story-body");
+                    for (Element el : element.select("p")) {
+                        content += el.text();
+                    }
+                    data.setContent(content);
+                } else if (data.getSite(i) == "SKYSPORTS") {
+                    element = doc.select("div.article__body");
+                    for (Element el : element.select("p")) {
+                        if (!el.hasClass("widge-marketing__text")) {
+                            content += el.text();
+                        }
+                    }
+                    data.setContent(content);
+                }
+                if (data.getContent(i).length() > 0){
+                    /*
+                    System.out.println(data.getDate(i));
+                    System.out.println(data.getHeadline(i));
+                    System.out.println(data.getUrl(i));
+                    System.out.println(data.getSite(i));
+                    */
+                    document = data.getContent((i)).replaceAll("\\s+",",");
+                    goodUrl.add(data.getUrl(i));
+                    documents.add(new ArrayList<String>(Arrays.asList(document.split(","))));
+                }
+                else
+                    System.out.println("No content: " + data.getUrl(i));
+            }
+            catch (Exception e) {
+                System.out.println("Something went wrong.: " + e);
+            }
+        }
+        for (int i = 0; i < documents.size(); i++){
+            DecimalFormat df = new DecimalFormat("#.####");
+            TFIDF calculator = new TFIDF();
+            double tfidf = calculator.tfIdf(documents.get(i), documents, key[0]);
+            result.add(Arrays.asList((df.format(tfidf)), goodUrl.get(i)));
+        }
+        for (int i = 0; i < result.size(); i++){
+            System.out.println("TF-IDF: " + result.get(i).get(0) + " Url: " + result.get(i).get(1));
+        }
+        double max;
+        int pos;
+        while (result.size() > 0){
+            pos = 0;
+            max = Double.parseDouble(result.get(0).get(0));
+            for (int i2 = 0; i2 < result.size(); i2++){
+                if (Double.compare(max,  Double.parseDouble(result.get(i2).get(0))) < 0){
+                    max = Double.parseDouble(result.get(i2).get(0));
+                    pos = i2;
+                }
+            }
+            result2.add(result.get(pos).get(1));
+            result.remove(pos);
+        }
+        for (int i = 0; i < result2.size(); i++){
+            System.out.println("Url: " + result2.get(i));
         }
 
     }
@@ -94,61 +158,8 @@ public class App {
 
     public static int changeDate(String date) {
         int formdate = 0;
-        String sp[] = date.split(" ");/*
-        formdate += Integer.parseInt(sp[2]) * 10000;
-        formdate += Integer.parseInt(sp[0]);
-
-        switch (sp[1]) {
-            case "January":
-            case "Jan":
-                formdate += 100;
-                break;
-            case "February":
-            case "Feb":
-                formdate += 200;
-                break;
-            case "March":
-            case "Mar":
-                formdate += 300;
-                break;
-            case "April":
-            case "Apr":
-                formdate += 400;
-                break;
-            case "May":
-                formdate += 500;
-                break;
-            case "June":
-            case "Jun":
-                formdate += 600;
-                break;
-            case "July":
-            case "Jul":
-                formdate += 700;
-                break;
-            case "August":
-            case "Aug":
-                formdate += 800;
-                break;
-            case "September":
-            case "Sep":
-                formdate += 900;
-                break;
-            case "October":
-            case "Oct":
-                formdate += 1000;
-                break;
-            case "November":
-            case "Nov":
-                formdate += 1100;
-                break;
-            case "December":
-            case "Dec":
-                formdate += 1200;
-                break;
-
-        }*/
-
+        String sp[] = date.split(" ");
+        formdate = 0;
         return formdate;
 
     }
