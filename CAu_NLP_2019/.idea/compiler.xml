@@ -9,5 +9,8 @@
         <module name="CAu_NLP_2019" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CAu_NLP_2019" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
