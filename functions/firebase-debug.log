@@ -1,0 +1,591 @@
+[debug] [2019-06-12T12:34:18.789Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T12:34:18.792Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-12T12:34:18.793Z] CLI Version:   6.10.0
+[debug] [2019-06-12T12:34:18.793Z] Platform:      win32
+[debug] [2019-06-12T12:34:18.793Z] Node Version:  v10.15.1
+[debug] [2019-06-12T12:34:18.795Z] Time:          Wed Jun 12 2019 21:34:18 GMT+0900 (GMT+09:00)
+[debug] [2019-06-12T12:34:18.795Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T12:34:18.807Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T12:34:18.808Z] > authorizing via signed-in user
+[debug] [2019-06-12T12:34:18.808Z] [iam] checking project pq-man for permissions ["firebase.projects.get"]
+[debug] [2019-06-12T12:34:18.812Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pq-man:testIamPermissions  
+
+[debug] [2019-06-12T12:34:19.669Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T12:34:19.671Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pq-man  
+ 
+[debug] [2019-06-12T12:34:20.483Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@10 from host.
+[debug] [2019-06-12T12:34:20.494Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155870179466:getServerAppConfig  
+ 
+[debug] [2019-06-12T12:34:21.066Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions" for Cloud Functions...
+[debug] [2019-06-12T12:34:21.627Z] Functions runtime initialized.
+[debug] [2019-06-12T12:34:21.628Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:34:22.381Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/pq-man/us-central1/search
+[debug] [2019-06-12T12:34:23.784Z] Accepted request GET /pq-man/us-central1/search?s=handball --> search
+[debug] [2019-06-12T12:34:24.375Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:34:24.378Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:34:25.197Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:34:25.217Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:34:25.217Z] 
+[debug] [2019-06-12T12:34:25.217Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:34:25.227Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\8112"}
+[debug] [2019-06-12T12:34:25.230Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\8112"}
+[debug] [2019-06-12T12:34:25.237Z] Ephemeral server used!
+[info] >  
+[debug] [2019-06-12T12:34:25.239Z] Ephemeral server survived.
+[warn] !  TypeError: Converting circular structure to JSON
+    at JSON.stringify (<anonymous>)
+    at stringify (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\express\lib\response.js:1127:12)
+    at ServerResponse.json (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\express\lib\response.js:264:14)
+    at ServerResponse.send (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\express\lib\response.js:162:21)
+    at exports.search.functions.https.onRequest (C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\lib\index.js:13:9)
+    at Run (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:413:20)
+    at C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:387:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:7:71
+    at new Promise (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2019-06-12T12:34:44.027Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[debug] [2019-06-12T12:34:45.667Z] Functions runtime initialized.
+[debug] [2019-06-12T12:34:45.669Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:34:46.505Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:34:48.239Z] Accepted request GET /pq-man/us-central1/search?s=handball --> search
+[debug] [2019-06-12T12:34:48.937Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:34:48.940Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:34:49.884Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:34:49.902Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:34:49.902Z] 
+[debug] [2019-06-12T12:34:49.902Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:34:49.911Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\10720"}
+[debug] [2019-06-12T12:34:49.913Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\10720"}
+[debug] [2019-06-12T12:34:49.922Z] Ephemeral server used!
+[info] >  
+[debug] [2019-06-12T12:34:49.924Z] Ephemeral server survived.
+[warn] !  TypeError: Converting circular structure to JSON
+    at JSON.stringify (<anonymous>)
+    at stringify (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\express\lib\response.js:1127:12)
+    at ServerResponse.json (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\express\lib\response.js:264:14)
+    at ServerResponse.send (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\express\lib\response.js:162:21)
+    at exports.search.functions.https.onRequest (C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\lib\index.js:13:9)
+    at Run (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:413:20)
+    at C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:387:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:7:71
+    at new Promise (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[info] Shutting down...
+[debug] [2019-06-12T12:35:03.494Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T12:35:03.497Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-12T12:35:03.497Z] CLI Version:   6.10.0
+[debug] [2019-06-12T12:35:03.497Z] Platform:      win32
+[debug] [2019-06-12T12:35:03.497Z] Node Version:  v10.15.1
+[debug] [2019-06-12T12:35:03.499Z] Time:          Wed Jun 12 2019 21:35:03 GMT+0900 (GMT+09:00)
+[debug] [2019-06-12T12:35:03.499Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T12:35:03.511Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T12:35:03.512Z] > authorizing via signed-in user
+[debug] [2019-06-12T12:35:03.513Z] [iam] checking project pq-man for permissions ["firebase.projects.get"]
+[debug] [2019-06-12T12:35:03.515Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pq-man:testIamPermissions  
+
+[debug] [2019-06-12T12:35:04.436Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T12:35:04.438Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pq-man  
+ 
+[debug] [2019-06-12T12:35:05.245Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@10 from host.
+[debug] [2019-06-12T12:35:05.256Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155870179466:getServerAppConfig  
+ 
+[debug] [2019-06-12T12:35:06.031Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions" for Cloud Functions...
+[debug] [2019-06-12T12:35:06.691Z] Functions runtime initialized.
+[debug] [2019-06-12T12:35:06.692Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:35:07.479Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/pq-man/us-central1/search
+[debug] [2019-06-12T12:35:08.566Z] Accepted request GET /pq-man/us-central1/search?s=handball --> search
+[debug] [2019-06-12T12:35:09.154Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:35:09.156Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:35:09.973Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:35:09.990Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:35:09.990Z] 
+[debug] [2019-06-12T12:35:09.990Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:35:10.001Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\5564"}
+[debug] [2019-06-12T12:35:10.004Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\5564"}
+[debug] [2019-06-12T12:35:10.011Z] Ephemeral server used!
+[info] >  
+[debug] [2019-06-12T12:35:10.013Z] Ephemeral server survived.
+[warn] !  TypeError: Converting circular structure to JSON
+    at JSON.stringify (<anonymous>)
+    at exports.search.functions.https.onRequest (C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\lib\index.js:13:19)
+    at Run (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:413:20)
+    at C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:387:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:7:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:3:12)
+    at Run (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:380:12)
+    at C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:412:15
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2019-06-12T12:35:58.805Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[debug] [2019-06-12T12:36:00.607Z] Functions runtime initialized.
+[debug] [2019-06-12T12:36:00.608Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[info] Shutting down...
+[debug] [2019-06-12T12:36:11.692Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T12:36:11.696Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-12T12:36:11.696Z] CLI Version:   6.10.0
+[debug] [2019-06-12T12:36:11.696Z] Platform:      win32
+[debug] [2019-06-12T12:36:11.696Z] Node Version:  v10.15.1
+[debug] [2019-06-12T12:36:11.698Z] Time:          Wed Jun 12 2019 21:36:11 GMT+0900 (GMT+09:00)
+[debug] [2019-06-12T12:36:11.698Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T12:36:11.710Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T12:36:11.711Z] > authorizing via signed-in user
+[debug] [2019-06-12T12:36:11.711Z] [iam] checking project pq-man for permissions ["firebase.projects.get"]
+[debug] [2019-06-12T12:36:11.714Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pq-man:testIamPermissions  
+
+[debug] [2019-06-12T12:36:12.585Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T12:36:12.586Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pq-man  
+ 
+[debug] [2019-06-12T12:36:13.392Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@10 from host.
+[debug] [2019-06-12T12:36:13.401Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155870179466:getServerAppConfig  
+ 
+[debug] [2019-06-12T12:36:14.171Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions" for Cloud Functions...
+[debug] [2019-06-12T12:36:15.018Z] Functions runtime initialized.
+[debug] [2019-06-12T12:36:15.018Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:36:15.909Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/pq-man/us-central1/search
+[debug] [2019-06-12T12:36:16.494Z] Accepted request GET /pq-man/us-central1/search?s=handball --> search
+[debug] [2019-06-12T12:36:16.748Z] Accepted request GET /pq-man/us-central1/search?s=handball --> search
+[debug] [2019-06-12T12:36:17.167Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:36:17.169Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:36:17.413Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:36:17.415Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:36:18.243Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:36:18.267Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:36:18.268Z] 
+[debug] [2019-06-12T12:36:18.268Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:36:18.280Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\18784"}
+[debug] [2019-06-12T12:36:18.284Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\18784"}
+[debug] [2019-06-12T12:36:18.293Z] Ephemeral server used!
+[info] >  
+[debug] [2019-06-12T12:36:18.302Z] Ephemeral server survived.
+[info] i  functions: Finished "search" in ~1s
+[debug] [2019-06-12T12:36:18.466Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:36:18.485Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:36:18.485Z] 
+[debug] [2019-06-12T12:36:18.485Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:36:18.496Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\13280"}
+[debug] [2019-06-12T12:36:18.498Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\13280"}
+[debug] [2019-06-12T12:36:18.506Z] Ephemeral server used!
+[info] >  
+[debug] [2019-06-12T12:36:18.513Z] Ephemeral server survived.
+[info] i  functions: Finished "search" in ~1s
+[debug] [2019-06-12T12:36:25.915Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[debug] [2019-06-12T12:36:27.536Z] Functions runtime initialized.
+[debug] [2019-06-12T12:36:27.537Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:36:28.466Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:36:29.471Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[debug] [2019-06-12T12:36:31.307Z] Functions runtime initialized.
+[debug] [2019-06-12T12:36:31.308Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:36:32.289Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:37:35.513Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[info] Shutting down...
+[debug] [2019-06-12T12:37:45.746Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T12:37:45.749Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-12T12:37:45.749Z] CLI Version:   6.10.0
+[debug] [2019-06-12T12:37:45.749Z] Platform:      win32
+[debug] [2019-06-12T12:37:45.749Z] Node Version:  v10.15.1
+[debug] [2019-06-12T12:37:45.751Z] Time:          Wed Jun 12 2019 21:37:45 GMT+0900 (GMT+09:00)
+[debug] [2019-06-12T12:37:45.751Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T12:37:45.762Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T12:37:45.763Z] > authorizing via signed-in user
+[debug] [2019-06-12T12:37:45.764Z] [iam] checking project pq-man for permissions ["firebase.projects.get"]
+[debug] [2019-06-12T12:37:45.766Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pq-man:testIamPermissions  
+
+[debug] [2019-06-12T12:37:46.698Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T12:37:46.700Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pq-man  
+ 
+[debug] [2019-06-12T12:37:47.516Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@10 from host.
+[debug] [2019-06-12T12:37:47.524Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155870179466:getServerAppConfig  
+ 
+[debug] [2019-06-12T12:37:48.201Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions" for Cloud Functions...
+[debug] [2019-06-12T12:37:48.769Z] Functions runtime initialized.
+[debug] [2019-06-12T12:37:48.769Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:37:49.926Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/pq-man/us-central1/search
+[debug] [2019-06-12T12:37:51.732Z] Accepted request GET /pq-man/us-central1/search?s=handball --> search
+[debug] [2019-06-12T12:37:52.520Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:37:52.522Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:37:53.384Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:37:53.402Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:37:53.403Z] 
+[debug] [2019-06-12T12:37:53.403Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:37:53.412Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\13280"}
+[debug] [2019-06-12T12:37:53.415Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\13280"}
+[debug] [2019-06-12T12:37:53.423Z] Ephemeral server used!
+[debug] [2019-06-12T12:37:53.429Z] Ephemeral server survived.
+[info] i  functions: Finished "search" in ~1s
+[info] Shutting down...
+[debug] [2019-06-12T12:38:13.509Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T12:38:13.512Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-12T12:38:13.512Z] CLI Version:   6.10.0
+[debug] [2019-06-12T12:38:13.512Z] Platform:      win32
+[debug] [2019-06-12T12:38:13.512Z] Node Version:  v10.15.1
+[debug] [2019-06-12T12:38:13.514Z] Time:          Wed Jun 12 2019 21:38:13 GMT+0900 (GMT+09:00)
+[debug] [2019-06-12T12:38:13.514Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T12:38:13.526Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T12:38:13.526Z] > authorizing via signed-in user
+[debug] [2019-06-12T12:38:13.527Z] [iam] checking project pq-man for permissions ["firebase.projects.get"]
+[debug] [2019-06-12T12:38:13.529Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pq-man:testIamPermissions  
+
+[debug] [2019-06-12T12:38:14.599Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T12:38:14.600Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pq-man  
+ 
+[debug] [2019-06-12T12:38:15.406Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@10 from host.
+[debug] [2019-06-12T12:38:15.414Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155870179466:getServerAppConfig  
+ 
+[debug] [2019-06-12T12:38:15.904Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions" for Cloud Functions...
+[debug] [2019-06-12T12:38:16.462Z] Functions runtime initialized.
+[debug] [2019-06-12T12:38:16.462Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:38:17.213Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/pq-man/us-central1/search
+[debug] [2019-06-12T12:38:34.928Z] Accepted request GET /pq-man/us-central1/search?s=handball --> search
+[debug] [2019-06-12T12:38:35.544Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:38:35.547Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:38:36.360Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:38:36.378Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:38:36.378Z] 
+[debug] [2019-06-12T12:38:36.378Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:38:36.387Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\1376"}
+[debug] [2019-06-12T12:38:36.391Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\1376"}
+[debug] [2019-06-12T12:38:36.399Z] Ephemeral server used!
+[debug] [2019-06-12T12:38:36.400Z] Ephemeral server survived.
+[warn] !  TypeError: req.query is not a function
+    at exports.search.functions.https.onRequest (C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\lib\index.js:12:33)
+    at Run (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:413:20)
+    at C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:387:19
+    at Generator.next (<anonymous>)
+    at C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:7:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:3:12)
+    at Run (C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:380:12)
+    at C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:412:15
+    at Generator.next (<anonymous>)
+[warn] !  Your function was killed because it raised an unhandled error.
+[debug] [2019-06-12T12:38:44.580Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[debug] [2019-06-12T12:38:46.210Z] Functions runtime initialized.
+[debug] [2019-06-12T12:38:46.212Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:38:47.048Z] firebase-admin has been stubbed.
+[info] Shutting down...
+[debug] [2019-06-12T12:39:06.653Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T12:39:06.656Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-12T12:39:06.657Z] CLI Version:   6.10.0
+[debug] [2019-06-12T12:39:06.657Z] Platform:      win32
+[debug] [2019-06-12T12:39:06.657Z] Node Version:  v10.15.1
+[debug] [2019-06-12T12:39:06.659Z] Time:          Wed Jun 12 2019 21:39:06 GMT+0900 (GMT+09:00)
+[debug] [2019-06-12T12:39:06.659Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T12:39:06.672Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T12:39:06.673Z] > authorizing via signed-in user
+[debug] [2019-06-12T12:39:06.673Z] [iam] checking project pq-man for permissions ["firebase.projects.get"]
+[debug] [2019-06-12T12:39:06.675Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pq-man:testIamPermissions  
+
+[debug] [2019-06-12T12:39:07.538Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T12:39:07.540Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pq-man  
+ 
+[debug] [2019-06-12T12:39:08.352Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@10 from host.
+[debug] [2019-06-12T12:39:08.361Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155870179466:getServerAppConfig  
+ 
+[debug] [2019-06-12T12:39:09.064Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions" for Cloud Functions...
+[debug] [2019-06-12T12:39:09.613Z] Functions runtime initialized.
+[debug] [2019-06-12T12:39:09.614Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:39:10.664Z] Accepted request GET /pq-man/us-central1/search?s=handball --> search
+[debug] [2019-06-12T12:39:10.705Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/pq-man/us-central1/search
+[debug] [2019-06-12T12:39:11.290Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:39:11.293Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:39:12.119Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:39:12.137Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:39:12.137Z] 
+[debug] [2019-06-12T12:39:12.137Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:39:12.146Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\17324"}
+[debug] [2019-06-12T12:39:12.149Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\17324"}
+[debug] [2019-06-12T12:39:12.157Z] Ephemeral server used!
+[debug] [2019-06-12T12:39:12.162Z] Ephemeral server survived.
+[info] i  functions: Finished "search" in ~1s
+[debug] [2019-06-12T12:39:16.701Z] Accepted request GET /pq-man/us-central1/search/handball --> search
+[debug] [2019-06-12T12:39:17.437Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:39:17.439Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:39:18.265Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:39:18.283Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:39:18.283Z] 
+[debug] [2019-06-12T12:39:18.283Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:39:18.293Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\4608"}
+[debug] [2019-06-12T12:39:18.295Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\4608"}
+[debug] [2019-06-12T12:39:18.303Z] Ephemeral server used!
+[debug] [2019-06-12T12:39:18.307Z] Ephemeral server survived.
+[info] i  functions: Finished "search" in ~1s
+[debug] [2019-06-12T12:40:45.127Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[debug] [2019-06-12T12:40:46.885Z] Functions runtime initialized.
+[debug] [2019-06-12T12:40:46.886Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:40:50.855Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:40:55.504Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[debug] [2019-06-12T12:40:57.138Z] Functions runtime initialized.
+[debug] [2019-06-12T12:40:57.140Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:40:57.944Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:41:24.409Z] Accepted request GET /pq-man/us-central1/search/handball --> search
+[debug] [2019-06-12T12:41:25.015Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:41:25.021Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:41:26.190Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:41:26.211Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:41:26.211Z] 
+[debug] [2019-06-12T12:41:26.211Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:41:26.221Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\16888"}
+[debug] [2019-06-12T12:41:26.223Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\16888"}
+[debug] [2019-06-12T12:41:26.230Z] Ephemeral server used!
+[debug] [2019-06-12T12:41:26.233Z] Ephemeral server survived.
+[info] i  functions: Finished "search" in ~1s
+[debug] [2019-06-12T12:41:29.598Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[info] Shutting down...
+[debug] [2019-06-12T12:41:40.836Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T12:41:40.839Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-12T12:41:40.839Z] CLI Version:   6.10.0
+[debug] [2019-06-12T12:41:40.839Z] Platform:      win32
+[debug] [2019-06-12T12:41:40.839Z] Node Version:  v10.15.1
+[debug] [2019-06-12T12:41:40.840Z] Time:          Wed Jun 12 2019 21:41:40 GMT+0900 (GMT+09:00)
+[debug] [2019-06-12T12:41:40.840Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T12:41:40.855Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T12:41:40.856Z] > authorizing via signed-in user
+[debug] [2019-06-12T12:41:40.856Z] [iam] checking project pq-man for permissions ["firebase.projects.get"]
+[debug] [2019-06-12T12:41:40.859Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pq-man:testIamPermissions  
+
+[debug] [2019-06-12T12:41:41.735Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T12:41:41.737Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pq-man  
+ 
+[debug] [2019-06-12T12:41:42.548Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@10 from host.
+[debug] [2019-06-12T12:41:42.557Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155870179466:getServerAppConfig  
+ 
+[debug] [2019-06-12T12:41:43.107Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions" for Cloud Functions...
+[debug] [2019-06-12T12:41:43.663Z] Functions runtime initialized.
+[debug] [2019-06-12T12:41:43.663Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:41:44.518Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/pq-man/us-central1/search
+[debug] [2019-06-12T12:41:45.022Z] Accepted request GET /pq-man/us-central1/search/handball --> search
+[debug] [2019-06-12T12:41:45.601Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:41:45.603Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:41:46.408Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:41:46.427Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:41:46.427Z] 
+[debug] [2019-06-12T12:41:46.427Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:41:46.439Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\7584"}
+[debug] [2019-06-12T12:41:46.441Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\7584"}
+[debug] [2019-06-12T12:41:46.450Z] Ephemeral server used!
+[debug] [2019-06-12T12:41:46.457Z] Ephemeral server survived.
+[info] i  functions: Finished "search" in ~1s
+[debug] [2019-06-12T12:42:37.610Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[info] Shutting down...
+[debug] [2019-06-12T12:42:46.754Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T12:42:46.757Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-12T12:42:46.757Z] CLI Version:   6.10.0
+[debug] [2019-06-12T12:42:46.757Z] Platform:      win32
+[debug] [2019-06-12T12:42:46.757Z] Node Version:  v10.15.1
+[debug] [2019-06-12T12:42:46.758Z] Time:          Wed Jun 12 2019 21:42:46 GMT+0900 (GMT+09:00)
+[debug] [2019-06-12T12:42:46.758Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T12:42:46.771Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T12:42:46.772Z] > authorizing via signed-in user
+[debug] [2019-06-12T12:42:46.772Z] [iam] checking project pq-man for permissions ["firebase.projects.get"]
+[debug] [2019-06-12T12:42:46.774Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pq-man:testIamPermissions  
+
+[debug] [2019-06-12T12:42:47.692Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T12:42:47.694Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pq-man  
+ 
+[debug] [2019-06-12T12:42:48.496Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@10 from host.
+[debug] [2019-06-12T12:42:48.504Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155870179466:getServerAppConfig  
+ 
+[debug] [2019-06-12T12:42:48.980Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions" for Cloud Functions...
+[debug] [2019-06-12T12:42:49.551Z] Functions runtime initialized.
+[debug] [2019-06-12T12:42:49.551Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:42:50.315Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/pq-man/us-central1/search
+[debug] [2019-06-12T12:42:52.464Z] Accepted request GET /pq-man/us-central1/search/handball --> search
+[debug] [2019-06-12T12:42:53.072Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:42:53.075Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:42:53.902Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:42:53.922Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:42:53.922Z] 
+[debug] [2019-06-12T12:42:53.922Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:42:53.931Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\7800"}
+[debug] [2019-06-12T12:42:53.934Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\7800"}
+[debug] [2019-06-12T12:42:53.942Z] Ephemeral server used!
+[debug] [2019-06-12T12:42:53.949Z] Ephemeral server survived.
+[info] i  functions: Finished "search" in ~1s
+[debug] [2019-06-12T12:43:08.309Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[info] Shutting down...
+[debug] [2019-06-12T12:43:17.718Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T12:43:17.721Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-12T12:43:17.721Z] CLI Version:   6.10.0
+[debug] [2019-06-12T12:43:17.721Z] Platform:      win32
+[debug] [2019-06-12T12:43:17.721Z] Node Version:  v10.15.1
+[debug] [2019-06-12T12:43:17.723Z] Time:          Wed Jun 12 2019 21:43:17 GMT+0900 (GMT+09:00)
+[debug] [2019-06-12T12:43:17.723Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T12:43:17.736Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T12:43:17.737Z] > authorizing via signed-in user
+[debug] [2019-06-12T12:43:17.737Z] [iam] checking project pq-man for permissions ["firebase.projects.get"]
+[debug] [2019-06-12T12:43:17.740Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pq-man:testIamPermissions  
+
+[debug] [2019-06-12T12:43:18.654Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T12:43:18.655Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pq-man  
+ 
+[debug] [2019-06-12T12:43:19.474Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@10 from host.
+[debug] [2019-06-12T12:43:19.482Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155870179466:getServerAppConfig  
+ 
+[debug] [2019-06-12T12:43:19.972Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions" for Cloud Functions...
+[debug] [2019-06-12T12:43:20.515Z] Functions runtime initialized.
+[debug] [2019-06-12T12:43:20.515Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:43:21.269Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/pq-man/us-central1/search
+[debug] [2019-06-12T12:43:25.333Z] Accepted request GET /pq-man/us-central1/search/handball --> search
+[debug] [2019-06-12T12:43:25.932Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:43:25.934Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:43:26.759Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:43:26.779Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:43:26.779Z] 
+[debug] [2019-06-12T12:43:26.779Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:43:26.788Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\18224"}
+[debug] [2019-06-12T12:43:26.791Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\18224"}
+[debug] [2019-06-12T12:43:26.800Z] Ephemeral server used!
+[debug] [2019-06-12T12:43:26.806Z] Ephemeral server survived.
+[info] i  functions: Finished "search" in ~1s
+[debug] [2019-06-12T12:43:51.474Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[debug] [2019-06-12T12:43:53.217Z] Functions runtime initialized.
+[debug] [2019-06-12T12:43:53.218Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[info] Shutting down...
+[debug] [2019-06-12T12:44:02.193Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T12:44:02.196Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Mathieu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-06-12T12:44:02.197Z] CLI Version:   6.10.0
+[debug] [2019-06-12T12:44:02.197Z] Platform:      win32
+[debug] [2019-06-12T12:44:02.197Z] Node Version:  v10.15.1
+[debug] [2019-06-12T12:44:02.198Z] Time:          Wed Jun 12 2019 21:44:02 GMT+0900 (GMT+09:00)
+[debug] [2019-06-12T12:44:02.198Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T12:44:02.211Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T12:44:02.212Z] > authorizing via signed-in user
+[debug] [2019-06-12T12:44:02.212Z] [iam] checking project pq-man for permissions ["firebase.projects.get"]
+[debug] [2019-06-12T12:44:02.215Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pq-man:testIamPermissions  
+
+[debug] [2019-06-12T12:44:03.082Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T12:44:03.084Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pq-man  
+ 
+[debug] [2019-06-12T12:44:03.878Z] <<< HTTP RESPONSE 200
+[info] +  functions: Using node@10 from host.
+[debug] [2019-06-12T12:44:03.886Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/155870179466:getServerAppConfig  
+ 
+[debug] [2019-06-12T12:44:04.379Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions" for Cloud Functions...
+[debug] [2019-06-12T12:44:04.948Z] Functions runtime initialized.
+[debug] [2019-06-12T12:44:04.949Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:44:05.702Z] firebase-admin has been stubbed.
+[info] i  functions: HTTP trigger initialized at http://localhost:5000/pq-man/us-central1/search
+[debug] [2019-06-12T12:44:48.098Z] Accepted request GET /pq-man/us-central1/search/handball --> search
+[debug] [2019-06-12T12:44:48.751Z] Functions runtime initialized.
+[info] i  functions: Beginning execution of "search"
+[debug] [2019-06-12T12:44:48.754Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:44:49.624Z] firebase-admin has been stubbed.
+[debug] [2019-06-12T12:44:49.930Z] Trigger "search" has been found, beginning invocation!
+[debug] [2019-06-12T12:44:49.930Z] 
+[debug] [2019-06-12T12:44:49.930Z] Running search in mode HTTPS
+[info] i  Your code has been provided a "firebase-admin" instance.
+[info] i  Your code does not appear to initialize the 'firebase-admin' module, so we've done it automatically.
+   - Learn more: https://firebase.google.com/docs/admin/setup
+[debug] [2019-06-12T12:44:49.940Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\10380"}
+[debug] [2019-06-12T12:44:49.951Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Mathieu\\Documents\\CAU-Project\\CAU-NLP-Spring-2019-PQ-Man-Site\\functions\\10380"}
+[debug] [2019-06-12T12:44:49.966Z] Ephemeral server used!
+[debug] [2019-06-12T12:44:49.973Z] Ephemeral server survived.
+[debug] [2019-06-12T12:44:59.310Z] File C:\Users\Mathieu\Documents\CAU-Project\CAU-NLP-Spring-2019-PQ-Man-Site\functions\src\index.ts changed, reloading triggers
+[debug] [2019-06-12T12:45:01.054Z] Functions runtime initialized.
+[debug] [2019-06-12T12:45:01.056Z] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"protect_env":true,"admin_stubs":true}
+[debug] [2019-06-12T12:45:02.001Z] firebase-admin has been stubbed.
+[info] i  functions: Finished "search" in ~21s
+[info] Shutting down...

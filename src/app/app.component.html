@@ -1,0 +1,63 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="main-container {{ (results.length > 0 ? 'top' : '') }}">
+
+  <div *ngIf="displayOverlay" class="overlay">
+
+    <div class="overlay-content">
+
+      <div class="center-container">
+
+        <mat-spinner></mat-spinner>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="center-container">
+
+    <h1>PQ-Man</h1>
+
+    <div class="search-bar">
+
+      <form (submit)="search()">
+
+        <input placeholder="Your Sport Recherche" #input (change)="searchInput = input.value"
+               type="text"/>
+
+        <div class="search-button">
+
+          <button type="submit">
+            <i class="material-icons">search</i>
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+    <div *ngIf="results.length > 0">
+
+      <div *ngFor="let result of results" class="results">
+        <a href="{{ result.url }}">
+          <div class="result">
+            <div>
+              {{ result.url }}
+            </div>
+            <div>
+              Ranking {{ round(100 * result.tfidf) }}
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
